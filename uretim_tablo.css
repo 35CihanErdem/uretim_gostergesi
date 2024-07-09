@@ -1,0 +1,109 @@
+#table1{
+    width: 100%;
+}
+#uretim{
+    overflow: hidden;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.uretim_arkaplan_rengi{
+    padding: 10px;
+    background-color: rgba(199, 192, 192, 0.404);
+}
+#tablo_uretim_ust{
+    height: 4vh;
+    background-color: greenyellow;
+}
+#uretim_etiketi{
+    color: red;
+    background-color: rgb(196, 190, 190);
+}
+#uretim_StokKodu{
+    border: 1px black solid;
+    font-size: 17px;
+    width: 150px;
+}
+#SKF_Kod{
+    border: 1px black solid;
+    color: red;
+    font-size: 26px;
+    text-align: center;
+}
+#uretim_stok{
+    text-align: center;
+}
+#urunAdi{
+    border: 1px black solid;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+#yuzdelik{
+    background-color: greenyellow;
+    text-align: center;
+    
+    
+}
+#yuzde_Baslik{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+#altBaslik{
+    text-align: center;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+}
+#uretimPlan{
+    text-align: center;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+}
+#altBaslik_degeri{
+    text-align: center;
+}
+#altBaslik_degeri1{
+    color: green;
+    border: 1px solid black;
+
+}
+#uretim_Plan1{
+    color: green;
+    border: 1px solid black;
+
+}
+#altBaslik_degeri3{
+
+    color: red;
+    border: 1px solid black;
+}
+
+#uretim_isimler{
+    color: red;
+    background-color: rgb(196, 190, 190);
+}
+.isim{
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#uretim_saat{
+    text-align: center;
+    color: white;
+    background-color: rgb(74, 70, 70);
+    font-size: 28px;
+}
+
+
+#radioButtons label {
+    font-size: 1.5em;
+    align-items: center;
+}
+#radioButtons input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+}

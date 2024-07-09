@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uretim_tablo.css">
+    <link rel="stylesheet" href="bekleme_tablo.css">
+    <title>Fabrika Yönetim</title>
+</head>
+<body>
+    <div id="radioButtons">
+        <label>
+            <input type="checkbox" name="hat" value="uretim" onclick="toggleHat(this)" checked> uretim Hatti
+        </label>
+        <label>
+            <input type="checkbox" name="hat" value="bekleme" onclick="toggleHat(this)"> Bekleme Hatti
+        </label>
+    </div>
+    
+    <div id="tum_tablolar">
+
+
+        <div class="hat uretim">
+            <div class="uretim_arkaplan_rengi">
+                <table id="table1-1">
+                    <tr id="tablo_uretim_ust">
+                        <td colspan="1">D7</td>
+                        <td colspan="4" style="padding-left: 30px;">SIPA</td>
+                    </tr>
+                    <tr id="uretim_etiketi">
+                        <td colspan="5">KALAN SON 144 ETİKET</td>
+                    </tr>
+                    <tr>
+                        <td id="uretim_stok">Stok</td>
+                        <td id="uretim_StokKodu" colspan="2">15101740003</td>
+                        <td>S.K.F</td>
+                        <td colspan="2" id="SKF_Kod">240666</td>
+                    </tr>
+                    <tr>
+                        <td id="urunAdi" colspan="5">73,3 GR 38 MM PREFORM ŞEFFAF</td>
+                    </tr>
+                    <tr>
+                        <td id="yuzde_Baslik">v1 Perf</td>
+                        <td id="yuzde_Baslik">v2 Perf</td>
+                        <td id="yuzde_Baslik">Şu A. P.</td>
+                        <td id="yuzde_Baslik">T.Perf</td>
+                        <td id="yuzde_Baslik">Gerçekleşen</td>
+                    </tr>
+                    <tr>
+                        <td id="yuzdelik">%356</td>
+                        <td id="yuzdelik">%303</td>
+                        <td id="yuzdelik">%270</td>
+                        <td id="yuzdelik">%329</td>
+                        <td id="yuzdelik">%71</td>
+                    </tr>
+                    <tr id="altBaslik">
+                        <td colspan="2">v1</td>
+                        <td colspan="1">v2</td>
+                        <td colspan="2">Toplam u.</td>
+                    </tr>
+                    <tr id="altBaslik_degeri">
+                        <td colspan="2" id="altBaslik_degeri1"><div>99999 PL</div></td>
+                        <td colspan="1" id="altBaslik_degeri1"><div>99999 PL</div></td>
+                        <td colspan="2" id="altBaslik_degeri3"><div>99999 PL</div></td>
+                    </tr>
+                    <tr id="uretimPlan">
+                        <td colspan="2"><div>Şu An u.</div></td>
+                        <td colspan="1" id="uretim_Plan1"><div>60 PL</div></td>
+                        <td colspan="1" id="uretim_Plan1"><div>500 PL</div></td>
+                        <td colspan="1"><div>Plan</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" id="uretim_isimler"><div class="isim">YAVUZ DEMİRBAŞ , YUSUF ÖNCuL</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" id="uretim_saat">4 Saat 6 Dakika</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="hat bekleme" style="display: none;">
+            <div class="bekleme_arkaplanrenk">
+                <table id="bekleme_tablosu-1">
+                    <tr id="bekleme_tablo_ust">
+                        <td>C18</td>
+                        <td style="margin-left: 10vh;">POWERJET</td>
+                    </tr>
+                    <tr id="bekleme_urun_Ad">
+                        <td style="padding-top: 1vh;">15202160211-0,25 LT KEFİR ŞİŞESİ 16,8 GR ŞEFFAF</td>
+                    </tr>
+                    <tr id="bekleme_urun_Kod">
+                        <td style="padding-top: 3vh;">C18-11-01</td>
+                    </tr>
+                    <tr id="bekleme_amaci">
+                        <td style="padding-top: 2vh;">PLANLI DURUS</td>
+                    </tr>
+                    <tr id="bekleme_amaci2">
+                        <td style="padding-top: 2vh; padding-bottom: 7vh;">PLANLI DURUS</td>
+                    </tr>
+                    <tr id="bekleme_isimler">
+                        <td><div class="bekleme_isimler2">NIMET YILDIZ, TUGCE OZEL</div></td>
+                    </tr>
+                    <tr id="bekleme_saat">
+                        <td>1 Dakika</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        
+        
+    </div>
+    
+    <script>
+        function toggleHat(checkbox) {
+            if (checkbox.checked) {
+                document.querySelectorAll('input[name="hat"]').forEach(function(input) {
+                    if (input !== checkbox) {
+                        input.checked = false;
+                    }
+                });
+            } else {
+                
+                checkbox.checked = true;
+            }
+
+            var hat = document.querySelector('input[name="hat"]:checked').value;
+            document.querySelectorAll('.hat').forEach(function(element) {
+                element.style.display = 'none';
+            });
+            document.querySelectorAll('.' + hat).forEach(function(element) {
+                element.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>

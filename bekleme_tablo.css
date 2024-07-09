@@ -1,0 +1,63 @@
+#bekleme_tablosu{
+    width: 373px;
+}
+.bekleme_arkaplanrenk{
+    padding: 10px;
+    background-color: rgba(199, 192, 192, 0.404);
+    margin: auto;
+}
+#bekleme_tablo_ust{
+    background-color: rgba(40, 167, 167, 0.647);
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+#bekleme{
+    overflow: hidden;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+#bekleme_urun_Ad{
+    color: rgba(255, 0, 0, 0.755);
+    text-align: center;
+   
+}
+#bekleme_urun_Kod{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+#bekleme_amaci{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+}
+#bekleme_amaci2{
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+}
+#bekleme_isimler{
+    color: red;
+    background-color: rgba(196, 190, 190, 0.64);
+}
+.bekleme_isimler2{
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#bekleme_saat{
+    text-align: center;
+    background-color: rgb(74, 70, 70);
+    font-size: 28px;
+    color: white;
+}
+
+#tum_tablolar{
+    overflow: hidden;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
